@@ -1,0 +1,58 @@
+body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+            "header_website"
+            "filter_section"
+            "accommodation_section"
+            "popularity_section"
+            "activities_section"
+            "footer";
+}
+
+h3, p, a{
+    font-size: 16px;
+}
+
+.four_stars, .three_stars, .five_stars {
+    font-size: 20px;
+}
+
+.activities_section_card h3 {
+    font-size: 14px;
+}
+
+#accommodation_section, #popularity_section {
+    margin: 0 20px;
+}
+
+#accommodation_section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50px repeat(3,250px) 50px;
+    grid-template-areas:
+            "accommodation_section_header accommodation_section_header"
+            "accommodation_section_a_1 accommodation_section_a_2"
+            "accommodation_section_a_3 accommodation_section_a_4"
+            "accommodation_section_a_5 accommodation_section_a_6"
+            "accommodation_section_button accommodation_section_button"
+    ;
+    background-color: var(--website-gray);
+    gap: 20px;
+    border-radius: 20px;
+}
+
+#activities_section {
+    gap: 30px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50px repeat(4, 200px) ;
+    grid-template-areas:
+            "activities_section_header activities_section_header"
+            "activities_section_a_1 activities_section_a_2"
+            "activities_section_a_1 activities_section_a_3"
+            "activities_section_a_4 activities_section_a_5"
+            "activities_section_a_4 activities_section_a_6"
+;
+}
+
+footer {
+    grid-template-columns: 33% 33% 33%;
+}
